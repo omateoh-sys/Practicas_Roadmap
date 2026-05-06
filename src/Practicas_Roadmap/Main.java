@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         ejercicioEnum();
         ejercicioInitializerBlock();
+        ejercicioPassByValue();
     }
 
     private static void ejercicioEnum() {
@@ -35,4 +36,25 @@ public class Main {
         estudiante3.mostrar();
         estudiante4.mostrar();
     }
+
+public static void ejercicioPassByValue() {
+	
+	Producto pro1 = new Producto("Bocina", 2000, 14);
+	
+	modificar(pro1);
+	
+	System.out.println("Cantidad: "+ pro1.cantidad);
+	System.out.println("Nombre: "+pro1.nombre);
+	System.out.println("Precio: "+pro1.precio);
+	
+}
+	
+public static void modificar(Producto prod ) {
+		prod.cantidad += 3;
+		
+		prod.nombre= "Tablet";
+		prod.precio= 1620;
+		
+}
+	
 }
